@@ -1,0 +1,118 @@
+{
+  "step1": {
+    "model": "AlexNet (from scratch)",
+    "accuracy": 0.85,
+    "precision": 0.8542,
+    "recall": 0.8434,
+    "f1": 0.8465,
+    "train_time": 20.1,
+    "params": 46755202,
+    "epochs": 10,
+    "lr": 0.0001
+  },
+  "step2": {
+    "model": "AlexNet (pretrained, frozen)",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "train_time": 8.2,
+    "total_params": 57012034,
+    "trainable_params": 54542338,
+    "epochs": 5,
+    "lr": 0.001
+  },
+  "step3": {
+    "no_aug": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "train_time": 4.8
+    },
+    "with_aug": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "train_time": 5.8
+    }
+  },
+  "step4": {
+    "resnet18": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "train_time": 4.8,
+      "params": 11177538,
+      "infer_time_ms": 11.35
+    },
+    "mobilenet_v3_small": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "train_time": 1.8,
+      "params": 1519906,
+      "infer_time_ms": 5.47
+    },
+    "shufflenet_v2_x1_0": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "train_time": 2.3,
+      "params": 1255654,
+      "infer_time_ms": 10.65
+    }
+  },
+  "step5": {
+    "best_val_acc": 1.0,
+    "inference_tests": [
+      {
+        "image": "cat.1.jpg",
+        "true": "cat 猫",
+        "pred": "cat 猫",
+        "confidence": 0.9348,
+        "correct": true
+      },
+      {
+        "image": "cat.2.jpg",
+        "true": "cat 猫",
+        "pred": "cat 猫",
+        "confidence": 0.8489,
+        "correct": true
+      },
+      {
+        "image": "cat.3.jpg",
+        "true": "cat 猫",
+        "pred": "cat 猫",
+        "confidence": 0.6956,
+        "correct": true
+      },
+      {
+        "image": "dog.1.jpg",
+        "true": "dog 狗",
+        "pred": "dog 狗",
+        "confidence": 0.9082,
+        "correct": true
+      },
+      {
+        "image": "dog.2.jpg",
+        "true": "dog 狗",
+        "pred": "dog 狗",
+        "confidence": 0.6154,
+        "correct": true
+      },
+      {
+        "image": "dog.3.jpg",
+        "true": "dog 狗",
+        "pred": "dog 狗",
+        "confidence": 0.8034,
+        "correct": true
+      }
+    ],
+    "inference_accuracy": 1.0
+  }
+}
